@@ -30,19 +30,19 @@ public class Coach {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long coachID;
 	
-	@NotNull
+
 	private String startPoint;
 	
-	@NotNull
+
 	private String endPoint;
 	
-	@NotNull
-	private LocalTime departureTime;
+
+	private Float departureTime;
 	
-	@NotNull
-	private LocalTime arrivalTime;
+
+	private Float arrivalTime;
 	
-	@NotNull
+
 	@Min(10)
 	private int capacity;
 	

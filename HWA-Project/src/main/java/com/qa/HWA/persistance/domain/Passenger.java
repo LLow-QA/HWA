@@ -26,7 +26,7 @@ public class Passenger {
 	private Long passengerID;
 	
 	@NotNull
-	@Size(min = 2, max = 20)
+	@Size(min = 2, max = 30)
 	private String first_name;
 	
 	@NotNull
@@ -56,4 +56,24 @@ public class Passenger {
 	
 	@ManyToOne
 	private Coach coach;
+
+	public Passenger(@NotNull @Size(min = 2, max = 30) String first_name,
+			@NotNull @Size(min = 2, max = 30) String last_name,
+			@NotNull @Pattern(regexp = "^[^@\\s]+@[^@\\s\\.]+\\.[^@\\.\\s]+$") String email, @NotNull String password,
+			@NotNull String address, @NotNull @Size(max = 8) String postcode, @Max(9) int numberOfTickets,
+			float totalCost) {
+		super();
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.email = email;
+		this.password = password;
+		this.address = address;
+		this.postcode = postcode;
+		this.numberOfTickets = numberOfTickets;
+		this.totalCost = totalCost;
+	}
+
+	
+	
+	
 }

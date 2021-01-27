@@ -8,25 +8,25 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <title>QA Coaches - Home</title>
+        <link rel = "stylesheet" href = "./login.css" type = "text/css">
+    <title>Login</title>
 </head>
 
-<body id="index" class="index hide-left-column hide-right-column lang_en" style>
-
+<body>
     <div id="page">
         <div class="header-container">
             <header id="header">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container">
 
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="./Index.html">
                             <img class="logo img-responsive" src="./QACoachesOutlined.png"
                                 alt="QA coaches simple logo. &copy;QA all rights reserved" width="232px" height="52px">
                         </a>
                         <div class="collapse navbar-collapse" id="navbarNavLeft">
                             <ul class="navbar-nav justify-content-start">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">&ThickSpace;<u>Home</u>&ThickSpace;<span
+                                    <a class="nav-link" href="./Index.html">&ThickSpace;Home&ThickSpace;<span
                                             class="sr-only"></span></a>
                                 </li>
                                 <li class="nav-item">
@@ -51,56 +51,54 @@
                                 </li>
                                 <li>/</li>
                                 <li class="nav-item ">
-                                    <a class="nav-link " href="./Login.html"><span class="fas fa-sign-in-alt"></span>
-                                        Login</a>
+                                    <a class="nav-link " href="./Login.html"><span class="fas fa-sign-in-alt"></span><u>
+                                            Login</u></a>
                                 </li>
                             </ul>
                         </div>
 
                     </div>
                 </nav>
-
-                <br />
-                <br />
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl" id="logo">
-                            <a href="./Index.html" title="QA Coaches">
-                                <img class="logo img-responsive" src="./bus-logo-abstract.jpg"
-                                    alt="QA Coaches abstract Logo &copy;freepik.com/kmsdesen all rights reserved"
-                                    width="248" height="191">
-                            </a>
-                        </div>
-                        <div class="col-xl"></div>
-                        <div class="col-xl">
-                            <div id="browse_bar" class="input-group md-form form-sm form-2 pl-0 justify-content-end">
-                                <form id="browse_locations" method="get" action="DESTINATION BROWSE">
-                                    <div class="input-group md-form form-sm form-2 pl-0">
-                                        <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Enter Destination:" aria-label="Search">
-                                        <div class="input-group-append">
-                                          <span class="input-group-text amber lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
-                                              aria-hidden="true"></i></span>
-                                        </div>
-                                      </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                <h1 id="loginheader" class="text-center">
+                    Login
+                </h1>
+                <div id = "logo" class = "text-center">
+                    <img src="./bus-logo-abstract.jpg" class="logo img-responsive"
+                        alt="QA coaches simple logo. &copy;QA all rights reserved" width="248" height="191">
                 </div>
             </header>
         </div>
-        <div class = "column-container">
-            <div class = "container">
+        <br/>
+        <br/>
+        <div id = "logincont" class="logincontainer">
+            <div class="container">
+                <div id = "logincol" class="col">
+                    <div class="class-body">
+                        <br />
+                        <label for="Username"><strong>Username:</strong></label>
+                        <input type="email" class="form-control" id="username1" name="Username"
+                            placeholder="name@example.com" required>
+                        <br />
+                        <label for="password1"><strong>Password:</strong></label>
+                        <input type="password" class="form-control" id="password1" required>
+                        <br />
+                        <div id = "loginbuttons" class = "text-center">
+                        
+                        <button type="button" class="btn btn-dark" id="LoginSubmit">Login</button>
+                    <button type="button" class="btn btn-dark" id="login2signup" >
+                        <a id = "needsStyle" href = "Signup.html">Not Registered?</a></button>
+                    </div>
+                    </div>
+                </div>
 
             </div>
         </div>
-    </div>
 
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-
+        <script src = "login.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,61 @@
+
+#coachChoice { 
+    border-collapse: collapse;
+    border-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#coachChoice tr td{
+    border-spacing: 5px;
+    padding : 5px;
+}
+
+#coachChoice thead tr th{
+    border-spacing: 5px;
+    padding : 5px;
+}
+
+#ticketslider{
+    width : 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-group-button{
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+#ticketnum{
+    display: inline;
+    width : 80px;
+}
+
+#less{
+    height: 30px;
+    padding-top: 1px;
+    padding-bottom:11px;
+}
+
+#more{
+    height: 30px;
+    padding-top: 1px;
+    padding-bottom: 11px;
+}
+
+#totalcost{
+    display: inline;
+    width : 180px;
+}
+
+#noUnder{
+    color : white;
+    text-decoration: none;
+}
+
+#purchaseSubmit{
+    width : 200px;
+}

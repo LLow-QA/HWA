@@ -1,6 +1,8 @@
 package com.qa.HWA.persistance.dto;
 
 
+import com.qa.HWA.persistance.domain.Coach;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -22,6 +24,7 @@ public class PassengerDTO {
 	private String postcode;
 	private int numberOfTickets;
 	private float totalCost;
+	private int coachID;
 	
 	
 	

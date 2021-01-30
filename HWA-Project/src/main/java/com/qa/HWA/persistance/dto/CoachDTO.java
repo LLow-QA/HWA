@@ -1,5 +1,6 @@
 package com.qa.HWA.persistance.dto;
 
+import java.sql.Time;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -15,14 +16,14 @@ public class CoachDTO {
 	private Long coachID;
 	private String startPoint;
 	private String endPoint;
-	private LocalTime departureTime;
-	private LocalTime arrivalTime;
+	private String departureTime;
+	private String arrivalTime;
 	private int capacity;
 	private float ticketCost;
 	private List<PassengerDTO> passengerList;
 	
 	
-	public CoachDTO(String startPoint, String endPoint, LocalTime departureTime, LocalTime arrivalTime, int capacity,
+	public CoachDTO(String startPoint, String endPoint, String departureTime, String arrivalTime, int capacity,
 			float ticketCost) {
 		super();
 		this.startPoint = startPoint;
@@ -34,7 +35,7 @@ public class CoachDTO {
 	}
 
 
-	public CoachDTO(Long coachID, String startPoint, String endPoint, LocalTime departureTime, LocalTime arrivalTime,
+	public CoachDTO(Long coachID, String startPoint, String endPoint, String departureTime, String arrivalTime,
 			int capacity, float ticketCost) {
 		super();
 		this.coachID = coachID;

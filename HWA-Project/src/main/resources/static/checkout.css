@@ -1,0 +1,24 @@
+
+
+#finalChoice { 
+    border: solid;
+    border-collapse: collapse;
+    border-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#finalChoice tr td{
+    border-spacing: 5px;
+    border: solid;
+    border-color: black;
+    padding : 5px;
+}
+
+#finalChoice thead tr th{
+    border-spacing: 5px;
+    border: solid;
+    border-color: black;
+    padding : 5px;
+}
+

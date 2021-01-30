@@ -8,8 +8,8 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-    <title>Destinations</title>
+    <link rel="stylesheet" href="login.css" type="text/css">
+    <title>Login</title>
 </head>
 
 <body>
@@ -37,12 +37,11 @@
                                 </li>
                             </ul>
                         </div>
-
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNavRight">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./myaccount.html"
-                                        title="View all our coach destinations">
+                                    <a class="nav-link" onclick="areYouLogged();" title="view account"
+                                        style="cursor: pointer;">
                                         &ThickSpace;My Account&ThickSpace;
                                     </a>
                                 </li>
@@ -52,33 +51,58 @@
                                 </li>
                                 <li>/</li>
                                 <li class="nav-item ">
-                                    <a class="nav-link " href="./Login.html"><span class="fas fa-sign-in-alt"></span>
-                                        Login</a>
+                                    <a class="nav-link " href="./Login.html"><span class="fas fa-sign-in-alt"></span><u>
+                                            Login</u></a>
                                 </li>
                             </ul>
                         </div>
 
                     </div>
                 </nav>
-                <h1 id="destinationsheader" class="text-center">
-                    Destinations
+                <h1 id="loginheader" class="text-center">
+                    Admin Login
                 </h1>
+                <div class="text-center">
+                    <a href="Index.html">
+                        <img src="./bus-logo-abstract.jpg" class="logo img-responsive"
+                            alt="QA coaches simple logo. &copy;QA all rights reserved" width="248" height="191">
+                    </a>
+                </div>
             </header>
         </div>
-        <div class="tablecontainer">
+        <br />
+        <br />
+        <div id="logincont" class="logincontainer">
             <div class="container">
+                <div id="logincol" class="col">
+                    <div class="class-body">
+                        <br />
+                        <label for="Username"><strong>Admin Username:</strong></label>
+                        <input type="email" class="form-control" id="adminuser" name="Username"
+                            placeholder="name@example.com" required>
+                        <br />
+                        <label for="password1"><strong>Admin Password:</strong></label>
+                        <input type="password" class="form-control" id="adminpass" required>
+                        <br />
+                        <div id="loginbuttons" class="text-center">
+
+                            <button type="button" class="btn btn-dark" id="adminSubmit"
+                                onclick="checkCreds();">Login</button>
+                            <button type="button" class="btn btn-dark" id="send2login" onclick="toLogin();">Not An
+                                Admin?</button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
-
-
-
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-    <script src="destinations.js"></script>
+    <script src="adminlogin.js"></script>
+    <script src="checkloggedin.js"></script>
 </body>
 
 </html>

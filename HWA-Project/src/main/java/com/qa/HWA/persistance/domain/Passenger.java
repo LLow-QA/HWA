@@ -48,7 +48,7 @@ public class Passenger {
 	@Size(max = 8)
 	private String postcode;
 
-	@Max(9)
+
 	private int numberOfTickets;
 	
 	
@@ -60,7 +60,7 @@ public class Passenger {
 	public Passenger(@NotNull @Size(min = 2, max = 30) String first_name,
 			@NotNull @Size(min = 2, max = 30) String last_name,
 			@NotNull @Pattern(regexp = "^[^@\\s]+@[^@\\s\\.]+\\.[^@\\.\\s]+$") String email, @NotNull String password,
-			@NotNull String address, @NotNull @Size(max = 8) String postcode, @Max(9) int numberOfTickets,
+			@NotNull String address, @NotNull @Size(max = 8) String postcode, int numberOfTickets,
 			float totalCost) {
 		super();
 		this.first_name = first_name;

@@ -82,6 +82,7 @@ const createEntry = () => {
                 "postcode": postcode2.value,
                 "totalCost": totalCost.value
 
+
             }),
             headers: {
                 'Content-type': "application/json",

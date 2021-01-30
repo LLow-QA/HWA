@@ -5,29 +5,73 @@ const coaches = document.querySelector("#peeps");
 
 //get method
 const getCoaches = () => {
-    fetch("localhost:8081/coach/readAll", {
-        method : "GET"
+    fetch("http://localhost:8081/coach/readAll", {
+        method: "GET"
     }).then(response => {
         if (response.status !== 200) {
             throw new Error("something went wrong");
         } else {
             response.json().then(retrievedinfo => {
                 console.log(retrievedinfo);
-                for(let i=0; i<json.length; i++) {
-            let h3 = document.createElement("h3");
-            let title = document.createTextNode(json[i].name);
-            let p = document.createElement("p");
-            let body = document.createTextNode(json[i].role);
-            
-            h3.appendChild(title);
-            p.appendChild(body);
 
-            coaches.appendChild(h3);
-            coaches.appendChild(p)
-}
+                addToTable(retrievedinfo);
             })
         }
     }).catch(err => console.error(err));
 }
 
- document.getElementById('getcoaches').addEventListener('click', getCoaches);
+
+const addToTable = (recieveddata) => {
+    console.log(recieveddata);
+    const table = document.getElementById("addhere");
+
+    for (let data of recieveddata) {
+
+
+        let row = table.insertRow();
+        let originrow = row.insertCell(0);
+        let origin = document.createTextNode(data.startPoint);
+        originrow.innerHTML = origin.nodeValue;
+
+        let destinationrow = row.insertCell(1);
+        let destination = document.createTextNode(data.endPoint);
+        destinationrow.innerHTML = destination.nodeValue;
+
+        let departrow = row.insertCell(2);
+        let depart = document.createTextNode(data.departureTime);
+        departrow.innerHTML = depart.nodeValue.substring(0, 5);
+
+        let arriverow = row.insertCell(3);
+        let arrive = document.createTextNode(data.arrivalTime);
+        arriverow.innerHTML = arrive.nodeValue.substring(0, 5);
+
+        let costrow = row.insertCell(4);
+        let cost = document.createTextNode(data.ticketCost);
+        costrow.innerHTML = ('£' + cost.nodeValue);
+
+        let buttonrow = row.insertCell(5);
+
+        let coachid = document.createTextNode(data.coachID);
+        let x = coachid.nodeValue;
+
+
+        let span = document.createElement("span")
+        span.innerHTML = `<button type = "button" id = "buyticket" name = '${x}' onclick = 'setInSessionStorage(this.name);'/>Buy Tickets</button>`;
+  
+        buttonrow.appendChild(span);
+
+    }
+
+
+}
+
+const setInSessionStorage = (name) => {
+    console.log(name);
+    if (sessionStorage.getItem("currentLogin") == undefined) {
+        alert('Please sign in to continue.');
+        location.replace("login.html");
+    } else {
+        sessionStorage.setItem("coach", name);
+        location.replace("PurchasePage.html");
+    }
+}

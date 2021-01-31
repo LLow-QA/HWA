@@ -66,5 +66,76 @@ public class Coach {
 		this.ticketCost = ticketCost;
 	}
 	
+
+	public Coach(Long coachID) {
+		super();
+		this.coachID = coachID;
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((arrivalTime == null) ? 0 : arrivalTime.hashCode());
+		result = prime * result + capacity;
+		result = prime * result + ((departureTime == null) ? 0 : departureTime.hashCode());
+		result = prime * result + ((endPoint == null) ? 0 : endPoint.hashCode());
+		result = prime * result + ((passengerList == null) ? 0 : passengerList.hashCode());
+		result = prime * result + ((startPoint == null) ? 0 : startPoint.hashCode());
+		result = prime * result + Float.floatToIntBits(ticketCost);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Coach other = (Coach) obj;
+		if (arrivalTime == null) {
+			if (other.arrivalTime != null)
+				return false;
+		} else if (!arrivalTime.equals(other.arrivalTime))
+			return false;
+		if (capacity != other.capacity)
+			return false;
+		if (departureTime == null) {
+			if (other.departureTime != null)
+				return false;
+		} else if (!departureTime.equals(other.departureTime))
+			return false;
+		if (endPoint == null) {
+			if (other.endPoint != null)
+				return false;
+		} else if (!endPoint.equals(other.endPoint))
+			return false;
+		if (passengerList == null) {
+			if (other.passengerList != null)
+				return false;
+		} else if (!passengerList.equals(other.passengerList))
+			return false;
+		if (startPoint == null) {
+			if (other.startPoint != null)
+				return false;
+		} else if (!startPoint.equals(other.startPoint))
+			return false;
+		if (Float.floatToIntBits(ticketCost) != Float.floatToIntBits(other.ticketCost))
+			return false;
+		return true;
+	}
+
+
+
+
+
+	
+
+	
+	
+
 	
 }

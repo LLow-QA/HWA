@@ -1,7 +1,5 @@
 package com.qa.HWA.persistance.dto;
 
-import java.sql.Time;
-import java.time.LocalTime;
 import java.util.List;
 
 import lombok.AllArgsConstructor;

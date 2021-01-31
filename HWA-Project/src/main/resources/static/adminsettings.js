@@ -1,5 +1,10 @@
 'use strict';
 
+const toViewAllPassengers = () => {
+
+    location.replace("adminViewAllPassengers.html");
+}
+
 const toAddCoach = () => {
 
     location.replace("addcoach.html");

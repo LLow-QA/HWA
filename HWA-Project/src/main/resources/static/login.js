@@ -41,12 +41,16 @@ const compare = (retrievedData) => {
         let testEmail = document.createTextNode(data.email);
         let testPass = document.createTextNode(data.password);
         let firstname = document.createTextNode(data.first_name);
+        let coachid = document.createTextNode(data.coachID);
+        let cost = document.createTextNode(data.totalCost);
 
 
         console.log(('"' + USERNAME.value + '"').localeCompare(testEmail));
         if ((testEmail.nodeValue === USERNAME.value) && (PASSWORD.value === testPass.nodeValue)) {
             alert('login successful, Welcome ' + firstname.nodeValue);
             sessionStorage.setItem("loginID", passengerId.nodeValue);
+            sessionStorage.setItem("coach", coachid.nodeValue);
+            sessionStorage.setItem("totalCost",cost.nodeValue);
             return true;
 
         }

@@ -1,5 +1,5 @@
 INSERT INTO coach ( `arrival_time`,`capacity`,`departure_time`,`end_point`,`start_point`,`ticket_cost`) VALUES
-('10:00',50,'12:00','Oxford','Cambridge',6.00),
+('12:00',50,'10:00','Oxford','Cambridge',6.00),
 ('15:45',60,'10:00','Manchester','London',10.99);
 
 INSERT INTO passenger (`address`,`email`,`first_name`,`last_name`,`number_of_tickets`,`password`,`postcode`,`total_cost`,`coach_coachid`) VALUES

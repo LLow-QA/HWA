@@ -24,7 +24,7 @@ public class PassengerDTO {
 	private String postcode;
 	private int numberOfTickets;
 	private float totalCost;
-	private int coachID;
+	private Long coachID;
 	
 	
 	

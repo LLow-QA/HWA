@@ -1,7 +1,6 @@
 'use strict';
 
 
-const coaches = document.querySelector("#peeps");
 
 //get method
 const getCoaches = () => {

@@ -9,14 +9,31 @@ const passengerid = sessionStorage.getItem('loginID');
 const countEl = document.getElementById("ticketnum");
 const ticket = document.getElementById("totalcost");
 
-let floatTot = Number.parseFloat(originalTot);
-let tickNum = Number.parseInt(String(originalTot / (Number.parseFloat(oneTickCost))));
-ticketNumBox.value = tickNum;
-costBox.value = originalTot;
 
+let count = 1;
 
 console.log(coachID.value);
 
+const plus = () => {
+    count++;
+    countEl.value = count;
+    displayTotalCost();
+}
+
+const minus = () => {
+  if (count > 1) {
+    count--;
+    countEl.value = count;
+    displayTotalCost();
+  }  
+}
+
+const displayTotalCost = () => {
+    let coachTicketPrice = sessionStorage.getItem("coachCost");
+    let tot = Number(coachTicketPrice)*count;
+    ticket.value = "£" + tot;
+    sessionStorage.setItem("totalCost",tot);
+}
 
 
 const readChosenCoach = () => {
@@ -27,7 +44,7 @@ const readChosenCoach = () => {
             throw new Error("something went wrong");
         } else {
             response.json().then(retrievedinfo => {
-
+                
                 console.log(retrievedinfo);
                 addToTable(retrievedinfo);
                 
@@ -62,33 +79,22 @@ const addToTable = (data) => {
     let cost = document.createTextNode(data.ticketCost);
     costrow.innerHTML = ('£' + cost.nodeValue);
     sessionStorage.setItem("coachCost",cost.nodeValue);
+
+
+
+    let tickNum = Number.parseInt(String(Number(sessionStorage.getItem("totalCost")) / (Number.parseFloat(sessionStorage.getItem("coachCost")))));
+    ticketNumBox.value = tickNum;
+    costBox.value = sessionStorage.getItem("totalCost");
+    count = tickNum;
+
+
     displayTotalCost(); 
 
 }
 
-let count = tickNum;
 
 
-const plus = () => {
-    count++;
-    countEl.value = count;
-    displayTotalCost();
-}
 
-const minus = () => {
-  if (count > 1) {
-    count--;
-    countEl.value = count;
-    displayTotalCost();
-  }  
-}
-
-const displayTotalCost = () => {
-    let coachTicketPrice = sessionStorage.getItem("coachCost");
-    let tot = Number(coachTicketPrice)*count;
-    ticket.value = "£" + tot;
-    sessionStorage.setItem("totalCost",tot);
-}
 
 
 const updateToProfile = () => {

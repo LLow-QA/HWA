@@ -1,0 +1,3 @@
+pom.xml: Added the Selenium dependencies to enable web testing.
+Index.html, Destinations.html: Created a working navbar for these two pages on my site.
+chromedriver.exe: The chrome executable that allows for automated website testing.

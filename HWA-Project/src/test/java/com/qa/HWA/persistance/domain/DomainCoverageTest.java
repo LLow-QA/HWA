@@ -6,14 +6,13 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
-import nl.jqno.equalsverifier.Warning;
+
 
 class DomainCoverageTest {
 
 	@Test
 	void testCoach() {
-		List<Coach> co = new ArrayList<>();
-		Coach newCO = new Coach ("London","Cardiff","10:00","14:00",55,12.00f);
+
 		List<Passenger> pass = new ArrayList<>();
 		Passenger newPass = new Passenger(1L,"Lloyd","Low","ll@qa.com", "Pass123", "20 Woodlands Road","OX28 2DN",1,6.00f,new Coach(null,null,null, null, null, 0, 0, null));
 		pass.add(newPass);

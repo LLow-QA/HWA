@@ -1,0 +1,17 @@
+pom.xml: Added extent report to the build path.
+AppConfig.java: Removed the @Profile annotation as it was affecting the system when in test mode.
+Coach.java: Removed all @NotNull annotations from the elements and changed both departureTime and arrivalTime to floats in an attempt to make "POST" easier, may revert later if I am feeling confident.
+Passenger.java: Added a constructor that could take the exact values offered to it by the signup form.
+CoachDTO.java: Updated with Lombok.
+PassengerDTO.java: Updated with Lombok.
+data-dev.sql: Updated time values to reflect their new floatiness.
+schema-dev.sql: Updated time values to reflect their new floatiness.
+Contact.html: Created a barebones contact page.
+Destinations.html: Created a barebones destinations page.
+Timetable.html: Created a barebones timetable page.
+Index.html: Created a barebones Index page with a search bar, this doesn't work yet.
+Signup.html: Created a fleshed out signup page that requests user data and passes it on. No css styling as of yet.
+signup.js: Full coding of the Signup.html form. The code checks that each field has been correctly filled out and send the result if correct to the backend for processing. Alerts trigger if any of the fields are incorrectly filled out and the form resets, want to implement some sort of save for correctly filled out fields.
+Login.html: Created a login page, has some css styling and is awaiting scripting so that it can effectively check a username and password.
+login.css: A small amount of visual styling for Login.html mainly a boarder around the inputs and centering of objects.
+timetable.js: The beginnings of a script that will pull all coaches from the database and then populate a table with the needed values, need to look into how to do this.

@@ -1,7 +1,6 @@
 package com.qa.HWA.persistance.dto;
 
 
-import com.qa.HWA.persistance.domain.Coach;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

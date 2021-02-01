@@ -1,7 +1,5 @@
 package com.qa.HWA.persistance.domain;
 
-import java.sql.Time;
-import java.time.LocalTime;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -12,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.annotations.OnDelete;

@@ -1,0 +1,17 @@
+Changelog4.txt: Added in last pushes changelog to the documentation folder.
+application-test.properties: Changed the port number to 8080 as most of my javascript methods run on that and at this stage its too late to alter them to all be fluid. Also added my test data for selenium tests.
+Login.html: Cleaned up the file.
+adminViewAllPassengers.html: Realized that I didn't have a method that would readAll() passengers so appended it to the admin tools.
+adminViewAllPassengers.js: A script that on page load displays all passengers in a table.
+adminView.css: An attempt at making the table look nice that failed spectacularly and took a large amount of time to achieve nothing. Genuinely can't work out why my borders weren't showing.
+adminsettings.java: Added a button to access the new feature described above.
+adminsetting.js: Added a script to the new button to redirect to the new page.
+Login.js: During manual testing I noticed a serious flaw with my system. If a user logged in, bought a ticket and then logged out as most people would, then they relogged and tried to update their purchase the webpage would crash. This was because on leaving the webpage or logging out the session storage would be wiped. To remedy this I have altered the script to set the totalCost and coachid at login to guarantee that this feature works.
+timetable.js: Cleanup of unused scripts.
+updateticket.js: Upped the priority of displayTotalCoast(), plus() and minus(). Also had it set the single ticket price in the session storage for the same reasons described above.
+IndexPage.html: The Main page of the POM architecture. Used for selenium testing as the point that the test enters the system. All major elements are mapped and various navigation methods have been set up.
+AdminLoginPage.java: A POM page for selenium testing representing the major elements on adminLogin.html.
+LoginPage.java: A POM page for selenium testing representing the major elements on Login.html.
+RegisterPage.html: A POM page for selenium testing representing the major elements on Signup.html.
+TimeTablePage.html: An incomplete POM page. I really struggled to incorporate it into the pageFactory system as I don't really understand how it works and the page this represents timetable.html is really just a pass through page not an end goal.
+QACoaches.java: The main selenium testbed, this where all tests are run from. Again my lack of understanding showed as it took me several hours to work out that scripted buttons in javascript couldn't be accessed by the .click() but instead had to be triggered by a JavascriptExecutor. I managed to create four working selenium tests, testing user and admin logins, ticket purchases and user registration. I would have made more if I had time.cript to set the _totalCost_ and _coachid_ at login to guarantee that this feature works.

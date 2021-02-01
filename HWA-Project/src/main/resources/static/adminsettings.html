@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Admin Settings</title>
+</head>
+
+<body>
+    <div id="page">
+        <div class="header-container">
+            <header id="header">
+                <h1 id="settingheader" class="text-center">
+                    Admin Settings
+                </h1>
+                <br />
+                <div class="text-center">
+                    <a href="Index.html">
+                        <img src="./bus-logo-abstract.jpg" class="logo img-responsive"
+                            alt="QA coaches simple logo. &copy;QA all rights reserved" width="248" height="191">
+                    </a>
+                </div>
+            </header>
+        </div>
+        <hr />
+        <br />
+        <div class="toolscontainer">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark" id="viewpassengers" onclick="toViewAllPassengers();">View all Passengers
+                        </button>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark" id="addcoach" onclick="toAddCoach();">Add Routes
+                        </button>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark" id="updatecoach" onclick="toUpdateCoach();">Update
+                            Route
+                            information</button>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-danger" id="deletecoach" onclick="toDeleteCoach();">Remove
+                            Route</button>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="adminsettings.js"></script>
+</body>
+
+</html>

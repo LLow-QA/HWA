@@ -1,0 +1,18 @@
+**Changelog3.txt:** Added the last changelog to documentation.
+**pom.xml:** Added the _nl.jqno.equalsverifier_ dependency so that I could easily test by DTOs and Domains.
+**Coach.java, Passenger.java:** Had to override the Lombok created _equals_ and _hashCode_ in order for tests to work as the ID was interfering with both.
+**CoachDTO.java:** Cleaned up some unused imports.
+**PassengerDTO.java:** altered the type of _coachID_ to Long.
+**CoachRepo.java:** added a find by end point request to test that the repo functioned properly.
+**schema-???.sql:** Updated the time columns to type _VarChar_ to better reflect how they are processed.
+**DomainCoverageTest.java:** This test covers **Passenger.java**,_(83.1% coverage)_, and **Coach.java**, _(87.3% coverage)_. The test utilizes _equalsverifier_ to check the equals and hashCode coverage using generic inputs.
+**DTOCoverageTest.java:** The same as **DomainCoveragetest.java** but for the DTOs utilizing _equalsverifier_ but in even more generic way as the classes have no _@ID_ dependencies. **CoachDTO.java**, _(83.7% coverage)_, **PassengerDTO.java**, _(82.9% coverage).
+**CoachRepoTest:** Comprehensive test of the repository.
+**CoachControllerIntegrationTest.java:** Comprehensive testing of **CoachController.java** within the system as a whole. All CRUD functionality is tested successfully.
+**CoachControllerUnitTest.java:** Full scale testing of **CoachController.java** in isolation. All CRUD functionality is successfully tested. _(100% coverage)_.
+**PassengerControllerIntegrationTest:**  Comprehensive testing of **PassengerController.java** within the system as a whole. All CRUD functionality is tested successfully. 
+**PassengerControllerUnitTest.java:** Full scale testing of **PassengerController.java** in isolation. All CRUD functionality is successfully tested. _(100% coverage)_.
+**CoachServiceIntegrationTest.java:** Comprehensive testing of **CoachService.java** within the system as a whole. All CRUD functionality is tested successfully.
+**CoachServiceUnitTest.java:** Full scale testing of **CoachService.java** in isolation. All CRUD functionality is successfully tested. _(100% coverage)_.
+**PassengerServiceIntegrationTest:**  Comprehensive testing of **PassengerService.java** within the system as a whole. All CRUD functionality is tested successfully. 
+**PassengerServiceUnitTest.java:** Full scale testing of **PassengerService.java** in isolation. All CRUD functionality is successfully tested. _(100% coverage)_.

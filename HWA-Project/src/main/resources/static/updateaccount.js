@@ -104,7 +104,7 @@ const checkEmail = (inputE) => {
 
 const updateEntry = () => {
 
-    if (!checkPassword(password2) || !checkNames(firstName2) || !checkNames(lastName2) || !checkPostcode(postcode2) || !checkEmail(email2)) {
+    if (!checkPassword(password) || !checkNames(firstName) || !checkNames(lastName) || !checkPostcode(postcode) || !checkEmail(email1)) {
         location.reload();
         return;
     }

@@ -4,8 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -97,7 +96,6 @@ class CoachServiceIntegrationTest {
 		
 		List<Passenger> pass = new ArrayList<>();
 		Coach newCoach = new Coach(1L,"Glasgow", "Edinburgh","17:30", "19:25", 45,2.50f,pass);
-		List<PassengerDTO> passDTO = new ArrayList<>();
 		CoachDTO updatedCoach = mapToDTO(newCoach);
 		
 		assertThat(this.service.update(1L, newCoach)).isEqualTo(updatedCoach);

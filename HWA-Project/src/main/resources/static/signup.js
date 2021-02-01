@@ -89,10 +89,10 @@ const createEntry = () => {
             },
         }).then((response) => response.json())
             .then((json) => console.log(json))
-            .catch(err => console.error("Stop"));
+            .catch(err => console.error(err));
 
         alert("Congratulations!!\n You have officially registered with QA Coaches.")
-        window.location.replace("login.html");
+        window.location.replace("Login.html");
     }
 }
 

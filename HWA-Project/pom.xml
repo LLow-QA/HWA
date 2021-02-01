@@ -10,15 +10,13 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.qa</groupId>
-	<artifactId>SpringExample1</artifactId>
+	<artifactId>HWA-Project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringExample1</name>
-	<description>Demo project for Spring Boot</description>
-
+	<name>HWA-Project</name>
+	<description>Hobby Web Application by Lloyd Low</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>14</java.version>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>nl.jqno.equalsverifier</groupId>
@@ -98,10 +96,12 @@
 
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
 		</plugins>
 	</build>
 

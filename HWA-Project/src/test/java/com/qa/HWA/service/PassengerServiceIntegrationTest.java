@@ -15,9 +15,7 @@ import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 
 import com.qa.HWA.persistance.domain.Coach;
 import com.qa.HWA.persistance.domain.Passenger;
-import com.qa.HWA.persistance.dto.CoachDTO;
 import com.qa.HWA.persistance.dto.PassengerDTO;
-import com.qa.HWA.persistance.repo.CoachRepo;
 import com.qa.HWA.persistance.repo.PassengerRepo;
 
 @SpringBootTest

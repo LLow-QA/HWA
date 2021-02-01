@@ -80,7 +80,7 @@ const createEntry = () => {
             body: JSON.stringify({
 
                 "arrivalTime": arrival_box.value,
-                "capacity": capcity_box.value,
+                "capacity": capacity_box.value,
                 "departureTime": departure_box.value,
                 "endPoint": destination_box.value,
                 "startPoint": origin_box.value,
